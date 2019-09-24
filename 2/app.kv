@@ -1,0 +1,27 @@
+# The kivy app contains a layout with orientation differed into several types - these have to be defined by BoxLayout.
+# Afterwards, the size to be allocated to each layout is defined and named, as well as given a correct orientation.
+# This is the kivy layout that is to be used when the app runs.
+
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        BoxLayout:
+            orientation: 'vertical'
+            id: left_layout
+            width:0
+            cols: 1
+            size_hint:None, 1
+        BoxLayout:
+            orientation: 'vertical'
+            BoxLayout:
+                orientation: 'vertical'
+                id: top_layout
+                size_hint: 1, .1
+            BoxLayout:
+                orientation: 'vertical'
+                id: right_layout
+                spacing: 1
+            Label:
+                size_hint_y: 0.1
+                id: bottom_layout
